@@ -7,7 +7,8 @@
   "type": "module",
   "exports": {
     ".": "./dist/src/index.js",
-    "./my-custom-element.js": "./dist/src/my-custom-element.js"
+    "./my-custom-element.js": "./dist/src/my-custom-element.js",
+    "./custom-elements": "./dist/custom-element-jsx.d.ts"
   },
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
