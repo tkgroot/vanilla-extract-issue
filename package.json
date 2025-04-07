@@ -19,6 +19,7 @@
     "format": "npm run format --workspaces --if-present"
   },
   "lint-staged": {
+    "*.{js,cjs,ts,tsx,html}": "eslint --cache --fix",
     "*": "prettier --write --ignore-unknown"
   },
   "prettier": {
