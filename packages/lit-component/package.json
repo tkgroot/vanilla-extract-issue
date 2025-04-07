@@ -7,7 +7,7 @@
   "type": "module",
   "exports": {
     ".": "./dist/src/index.js",
-    "./lit-element.js": "./dist/src/lit-element.js"
+    "./my-custom-element.js": "./dist/src/my-custom-element.js"
   },
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
