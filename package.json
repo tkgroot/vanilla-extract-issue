@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "dev": "npm run dev --workspaces --if-present",
+    "dev:app": "npm run dev --workspace=app",
+    "dev:lit": "npm run dev --workspace=lit-component",
     "lint": "npm run lint --workspaces --if-present",
     "format": "npm run format --workspaces --if-present"
   },
