@@ -4,23 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <style>
-      body {
+      :root {
+        color-scheme: light dark;
+        color: #1a1a1a;
         background: #fafafa;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          color: #213547;
+          background: #fff;
+        }
       }
     </style>
   </head>
   <body>
-    <div id="demo"></div>
+    <fieldset>
+      <legend>Default</legend>
+      <my-custom-element></my-custom-element>
+    </fieldset>
+
+    <fieldset>
+      <legend>with custom header</legend>
+      <my-custom-element header="Custom Header">some light-dom</my-custom-element>
+    </fieldset>
 
     <script type="module">
-      import { html, render } from 'lit';
       import '../dist/src/my-custom-element.js';
-
-      const header = 'Hello owc World!';
-      render(
-        html` <my-custom-element .header=${header}> some light-dom </my-custom-element> `,
-        document.querySelector('#demo'),
-      );
     </script>
   </body>
 </html>
