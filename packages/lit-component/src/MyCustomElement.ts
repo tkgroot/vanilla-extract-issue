@@ -11,7 +11,7 @@ export class MyCustomElement extends LitElement {
   `;
 
   @property({ type: String })
-  header = 'Hey there';
+  header = '';
 
   @property({ type: Number })
   counter = 5;
@@ -22,7 +22,7 @@ export class MyCustomElement extends LitElement {
 
   render() {
     return html`
-      <h2>${this.header} Nr. ${this.counter}!</h2>
+      <h2>${this.header} ${this.counter}!</h2>
       <button @click=${this.__increment}>increment</button>
     `;
   }
