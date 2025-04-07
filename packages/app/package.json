@@ -7,7 +7,12 @@
     "build": "tsc -b && vite build",
     "clean": "rimraf dist",
     "dev": "vite",
-    "lint": "eslint .",
+    "format": "run-p format:*",
+    "format:eslint": "eslint --fix .",
+    "format:prettier": "prettier --write --ignore-unknown .",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check --ignore-unknown .",
     "preview": "vite preview"
   },
   "dependencies": {
