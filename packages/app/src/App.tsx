@@ -3,6 +3,7 @@ import './App.css';
 import litLogo from './assets/lit.svg';
 import reactLogo from './assets/react.svg';
 import vanillaExtractLogo from './assets/vanilla-extract.svg';
+import { container } from './styles/container.css.js';
 import viteLogo from '/vite.svg';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className={container}>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
