@@ -25,6 +25,7 @@ export class MyCustomElement extends LitElement {
     :host button:hover {
       border-color: #646cff;
     }
+
     :host button:focus,
     :host button:focus-visible {
       outline: 4px auto -webkit-focus-ring-color;
@@ -46,12 +47,10 @@ export class MyCustomElement extends LitElement {
 
   __increment() {
     this.counter += 1;
+    this.dispatchEvent(new CustomEvent('custom-count-event', { detail: this.counter }));
   }
 
   render() {
-    return html`
-      <h2>${this.header} ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
-    `;
+    return html`<button @click=${this.__increment}>increment</button>`;
   }
 }
