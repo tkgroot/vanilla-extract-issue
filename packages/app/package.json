@@ -13,6 +13,7 @@
     "lint": "run-p lint:*",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check --ignore-unknown .",
+    "lint:tsc": "tsc -b --noEmit",
     "preview": "vite preview"
   },
   "dependencies": {
