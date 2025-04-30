@@ -1,3 +1,4 @@
+import 'lit-component/my-custom-element.js';
 import { useState } from 'react';
 import './App.css';
 import litLogo from './assets/lit.svg';
@@ -27,7 +28,13 @@ function App() {
       </div>
       <h1>Vite + React + Lit + Vanilla-Extract</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
+        <span className="counter">{count}</span>
+        <my-custom-element
+          oncustom-count-event={e => {
+            const counter: number = Number(e.detail);
+            setCount(counter);
+          }}
+        ></my-custom-element>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
